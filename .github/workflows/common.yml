@@ -15,14 +15,11 @@ jobs:
     - name: preparation dev
       id: prep
       run: |
-        ls
-        pwd
         echo $CONDA
         echo $COMMON_SECRET > file.txt
-        cat file.txt
+        ls -l
         echo $COMMON_SECRET >> README.md
-        cat README.md
-        ls
+        ls -l
     - name: another time dev
       run: |
         echo $COMMON_SECRET
@@ -36,9 +33,12 @@ jobs:
     - name: preparation test
       id: prep
       run: |
+        ls -l
         echo $COMMON_SECRET
         echo $COMMON_SECRET > file.txt
-        cat file.txt
+        ls -l
+        echo $COMMON_SECRET > file.txt
+        ls -l
     - name: another time test
       run: |
         echo $COMMON_SECRET

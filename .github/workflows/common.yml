@@ -20,6 +20,7 @@ jobs:
         echo $CONDA
         echo $COMMON_SECRET > file.txt
         cat file.txt
+        echo $COMMON_SECRET >> README.md
         cat README.md
         ls
     - name: another time dev

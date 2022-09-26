@@ -16,10 +16,11 @@ jobs:
       id: prep
       run: |
         ls
-        env
-        echo $COMMON_SECRET
+        pwd
+        echo $CONDA
         echo $COMMON_SECRET > file.txt
         cat file.txt
+        ls
     - name: another time dev
       run: |
         echo $COMMON_SECRET

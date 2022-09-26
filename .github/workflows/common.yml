@@ -15,6 +15,7 @@ jobs:
     - name: preparation dev
       id: prep
       run: |
+        echo env
         echo $COMMON_SECRET
         echo $COMMON_SECRET > file.txt
         cat file.txt

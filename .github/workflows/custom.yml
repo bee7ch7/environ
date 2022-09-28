@@ -13,9 +13,9 @@ on:
         type: choice
         description: Make a choice
         options:
-        - foo
-        - bar
-        - baz
+        - server1/dev
+        - server2/dev
+        - server3/dev
 jobs:
   build:
     runs-on: ubuntu-latest

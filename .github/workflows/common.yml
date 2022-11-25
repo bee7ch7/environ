@@ -11,9 +11,11 @@ jobs:
       run: |
         echo "TF_VAR_nr_license_key=NEW_RELIC_LICENSE" >> $GITHUB_ENV
         echo "TF_VAR_google_client_id=GOOGLE_CLIENT_ID" >> $GITHUB_ENV
-        env
+        bash envs.sh
     - name: get env
       run: |
         env
         echo $TF_VAR_nr_license_key
         echo $TF_VAR_google_client_id
+        echo $AAA_NEW_VAR_1
+        echo $AAA_NEW_VAR_2

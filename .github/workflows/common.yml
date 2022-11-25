@@ -11,6 +11,7 @@ jobs:
       run: |
         export TF_VAR_nr_license_key=NEW_RELIC_LICENSE
         export TF_VAR_google_client_id=GOOGLE_CLIENT_ID
+        env
     - name: get env
       run: |
         env

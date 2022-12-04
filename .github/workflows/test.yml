@@ -29,4 +29,6 @@ jobs:
         image: nginx:1.23.2
     
     - name: Show task
-      run: echo ${{ steps.task-def.outputs.task-definition }}
+      run: |
+        echo ${{ steps.task-def.outputs.task-definition }}
+        cat ${{ steps.task-def.outputs.task-definition }}

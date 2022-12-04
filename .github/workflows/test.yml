@@ -32,3 +32,11 @@ jobs:
       run: |
         echo ${{ steps.task-def.outputs.task-definition }}
         cat ${{ steps.task-def.outputs.task-definition }}
+        
+    - name: Deploy Amazon ECS task definition
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+      with:
+        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        service: doc-convertor-service
+        cluster: cluster
+        wait-for-service-stability: true

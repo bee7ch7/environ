@@ -29,4 +29,4 @@ jobs:
         image: nginx:1.23.2
     
     - name: Show task
-      run: cat task-definition.json
+      run: echo ${{ steps.task-def.outputs.task-definition }}

@@ -27,3 +27,6 @@ jobs:
         task-definition: task-definition.json
         container-name: nginx
         image: nginx:1.23.2
+    
+    - name: Show task
+      run: cat task-definition.json

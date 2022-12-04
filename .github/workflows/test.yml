@@ -9,7 +9,7 @@ jobs:
   task:
     name: Task updates
     runs-on: ubuntu-latest
-  
+    steps:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -18,7 +18,7 @@ jobs:
         aws-region: eu-central-1
         
     - name: Download task definition
-      run: aws ecs describe-task-definition --task-definition my-task-definition-family --query taskDefinition > task-definition.json
+      run: aws ecs describe-task-definition --task-definition doc-convertor-task-devtest --query taskDefinition > task-definition.json
       
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def

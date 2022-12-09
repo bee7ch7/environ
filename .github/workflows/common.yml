@@ -11,36 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: preparation dev
-      id: prep
-      run: |
-        echo $CONDA
-        echo $COMMON_SECRET > file.txt
-        ls -l
-        echo $COMMON_SECRET >> README.md
-        ls -l
-    - name: another time dev
-      run: |
-        echo $COMMON_SECRET
-        echo $COMMON_SECRET > file2.txt
-        cat file2.txt
-  test:
-    runs-on: ubuntu-latest
-    environment: dev
-    steps:
-    - uses: actions/checkout@v2
-    - name: preparation test
-      id: prep
-      run: |
-        ls -l
-        echo $COMMON_SECRET
-        echo $COMMON_SECRET > file.txt
-        ls -l
-        echo $COMMON_SECRET > file.txt
-        ls -l
-    - name: another time test
-      run: |
-        echo $COMMON_SECRET
-        echo $COMMON_SECRET > file2.txt
-        cat file2.txt
+      run: env

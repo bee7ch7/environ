@@ -1,11 +1,12 @@
-name: Docker Image CI
-
+name: Deploy
 on:
   push:
+
 jobs:
-  dev:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: env
-      run: env
+      - name: Build, tag, and push docker image to Amazon ECR
+        run: |
+          python --version
+          python3 --version
